@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Please Enter Your Details</h2>
+    <br>
+    <form>
+        <label for="usernameInput">Username:</label>
+        <input type="text" id="usernameInput">
+        <br>
+        <br>
+        <label for="PasswordInput">Password:</label>
+        <input type="password" id="userPassword">
+    </form>
+    <br>
+    <button onclick="userInfo()"><a href="#">Login</a></button>
+
+    <p id="feedback"></p>
+     
+    <script>
+       
+       //This function stores user information, that username and password
+       function userInfo(){
+        var username = document.getElementById("usernameInput").value
+        var password= document.getElementById("userPassword").value
+
+       checkUserInfo(username, password);
+       }
+
+       //This function checks user information
+
+  
+
+       function checkUserInfo(username, password){
+        var UsernameCheck = "Zulu";
+        var PasswordCheck = "123";
+        if(username == UsernameCheck && password == PasswordCheck){
+            document.getElementById("feedback").innerHTML = "Logging You In...";
+        }else{
+            document.getElementById("feedback").innerHTML = "Incorrect Password. Try Again.";
+        }
+       }
+
+
+
+
+    </script>
+
+</body>
+</html>
