@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="outputText"></h2>
+
+    <script>
+      var text1 = "5";
+      var text2 = "15";
+
+      if(isNaN(num1) && isNaN(num2)){
+        document.getElementById("outputText").innerHTML = "You Have Entered An Invalid Number Please Try Again.";
+      }else{
+        document.getElementById("outputText").innerHTML = num1 + num2;
+      }
+
+      var num1 = stringsToNumbers(text1);
+      var num2 = stringsToNumbers(text2);
+
+      function stringsToNumbers(text){
+        return parseInt(text);
+      }
+
+
+    </script>
+</body>
+</html>
